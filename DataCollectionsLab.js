@@ -1,54 +1,85 @@
-// The initial numbers that must be verified.
-const n1 = 10;
-const n2 = 15;
-const n3 = 20;
-const n4 = 5;
-const n5 = 4;
-const total = n1 % 5 + n2 % 5 + n3 % 5 + n4 % 5
-console.log(total);
-// Check one: add up to 50
-// This is a fairly simple operation using
-// arithmetic operators and a comparison.
-const isSum50 = n1 + n2 + n3 + n4 == 50;
+//Part 1 & 2
 
-// Check two: at least two odd numbers
-// Here, we use modulus to check if something is odd.
-// Since % 2 is 0 if even and 1 if odd, we can use
-// arithmetic to count the total number of odd numbers.
-const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
+/* 
+let employee = ["ID", "Name","Occupation", "Age"];
+let id = [42, 57, 63, 98];
+let name = ['Bruce', 'Bob', 'Blaine', 'Bill'];
+let occupation = ['Knight', 'Fry Cook', 'Quiz Master', 'Doctor/s Assistant'];
+let age = [41, 19, 58, 26];
 
-// Check three: no number larger than 25
-// This time, we use the OR operator to check
-// if ANY of the numbers is larger than 25.
-const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+ let employeearray = []; 
+ let employeetable = [];
 
-// Check four: all unique numbers
-// This is long, and there are more efficient
-// ways of handling it with other data structures
-// that we will review later.
-const isUnique =
-  n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
+employeetable.push(employee);
 
-// Here, we put the results into a single variable
-// for convenience. Note how we negate isOver25 using
-// the ! operator. We could also have tested for
-// "isUnder25" as an alternative.
-const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
+for (let i = 0; i < id.length; i++) {
+  let row = [id[i], name[i], occupation[i], age[i]];
+  employeetable.push(row);
+}
 
-// Finally, log the results.
-console.log(isValid);
+ employeearray.push(employeetable);
 
-// Here's another example of how this COULD be done,
-// but it SHOULD NOT be done this way. As programmers,
-// we break things into small, manageable pieces so that
-// they can be better understood, scaled, and maintained.
-const dontDoThis =
-  n1 + n2 + n3 + n4 == 50 &&
-  (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2 &&
-  !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) &&
-  n1 != n2 &&
-  n1 != n3 &&
-  n1 != n4 &&
-  n2 != n3 &&
-  n2 != n4 &&
-  n3 != n4;
+console.log(employeearray);
+*/ 
+
+//Part 3 - Please comment out Part 1 & 2 to run
+
+let employee = ["ID", "Name","Occupation", "Age"];
+let id = [42, 57, 63, 98];
+let name = ['Bruce', 'Bob', 'Blaine', 'Bill'];
+let occupation = ['Knight', 'Fry Cook', 'Quiz Master', 'Doctor/s Assistant'];
+let age = [41, 19, 58, 26];
+
+ let employeetable = [];
+
+employeetable.push(employee);
+
+for (let i = 0; i < id.length; i++) {
+  let row = [id[i], name[i], occupation[i], age[i]];
+  employeetable.push(row);
+}
+
+
+employeeobject = {
+  table: employeetable
+};
+
+let employeetableLowercase = employeetable.map(row => row.map(cell => {let str = cell.toString();
+  return str.toLowerCase();
+})
+);
+
+console.log(employeetableLowercase);
+
+
+//Part 4
+
+
+
+//Part 5
+
+
+/* Old Code
+let csv = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63, Blaine, Quiz Master, 58\n98, Bill, Doctor's Assistant, 26";
+let rows = csv.split("\n");
+
+for (let i = 0; i < csv.length; i++) {
+  let cells = rows[i].split(",");
+
+console.log(cells);
+
+}
+*/
+
+
+ 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
